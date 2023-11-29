@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .background{
+            width: 100%;
+    align-items: center;
+    
+    display: flex;
+    justify-content: space-evenly;
+    height: 600px;
+    
+}
+        .watch{
+            position: absolute;
+            background-color: #c1f0f0;;
+            display: flex;
+            
+            
+            align-items: center;
+           justify-content: space-evenly;
+    border-radius: 20px;
+    height: 24%;
+    width: 50%;
+        }
+        .box1{
+            width: 80px;
+    height: 80px;
+    background-color: rgb(208, 222, 226);
+    text-align: center;
+
+   
+    position: relative;
+    
+    margin-bottom: 180px;
+    margin-right: 150px;
+    border-radius: 10px;
+}
+.box2{
+    width: 80px;
+    height: 80px;
+    background-color: rgb(208, 222, 226);
+    border-radius: 80px;
+    margin-top: 120px;
+  
+    text-align: center;
+    margin-left: 80px;
+    position: relative;
+}
+p{
+    font-size: 80px;
+    color: darkcyan;
+    
+}
+h4{
+    margin-top: 20px;
+    color: white;
+}
+.heading{
+    margin-left: 490px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: darkgray;
+
+}
+    </style>
+    <h1 class="heading"><u>Digital watch</u></h1>
+    <div class="background">
+
+        <div class="box1"><h4>Digital</h4></div>
+       <div class="watch">
+            <p class="hh">hh</p><p>:</p> <p class="mm">mm</p><p>:</p> <p class="ss">ss</p>
+       </div>
+       <div class="box2"><h4>Watch</h4></div>
+    </div>
+
+    <script>
+        let gethour = document.querySelector('.hh');
+        let getminute = document.querySelector('.mm');
+        let getsecond = document.querySelector('.ss');
+        
+        function digitalwatch(){
+            let watch = new Date();
+            let hour = watch.getHours();
+            let minute = watch.getMinutes();
+            let second = watch.getSeconds();
+
+            gethour.innerText = hour;
+            getminute.innerText = minute;
+            getsecond.innerText = second;
+
+            setTimeout(digitalwatch,1000);
+           
+
+        }
+        digitalwatch();
+       
+
+        
+    </script>
+  
+</body>
+</html>
